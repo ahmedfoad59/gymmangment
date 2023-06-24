@@ -1,0 +1,803 @@
+body{
+    /* height: 10000px; */
+    background-color: #1E1E1E;
+}
+
+
+/* Start The Navbar */
+
+.main_nav .upper_side{
+
+    background-image: url(../images/Main/main.jpg);
+    background-position: center;
+    min-height: 500px;
+    background-attachment:scroll;
+    background-size:cover;
+}
+.main_nav .upper_side{
+    padding-left: 40%;  
+    padding-right: 4%;   
+    padding-top: 20px;   
+
+
+}
+
+.nav-item .nav-link{
+    color: #d3d3d3 !important;
+    font-weight:400 ;
+    font-weight: 600 ;
+    
+
+ 
+}
+.navbar-nav .active .link1{
+    font-weight: bold ;
+    color: #F26102 !important;
+
+}
+
+.nav-item .nav-link:hover{
+    text-decoration: underline;
+    color: #F26102 !important;
+    scale: 1.08;
+}
+
+.fixed-top {
+    position:static;
+    top: 0;
+    right: 29px;
+    left: 38%;
+}
+
+.main_nav .btn-outline-warning {
+    color: #F26102;
+    background-color: transparent;
+    background-image: none;
+    border-color: #F26102;
+}
+
+.main_nav .btn-outline-success:active {
+    color: #000000;
+    border-color: #F26102;
+}
+
+.contain-header{
+    margin-top: 80px;
+    color: #d3d3d3;
+    font: weight 900px !important;
+}
+
+.contain-header .first h4{
+    font-weight: bold;
+}
+
+.contain-header .second h1{
+    font-weight:  800 !important;
+    size: 32px;
+}
+
+.STR{
+    color: #F26102 !important;
+
+}
+
+.contain-header .third h1 {
+    font-weight:  800 !important;
+
+}
+
+/* End The Carousel */
+
+/* =====================================================================================================================================  */
+
+/* Start The Home */
+ .features{
+    padding-top: 50px;
+}
+
+ .features .container .row .colling{
+    color: #ffffff;
+
+}
+
+.features .container .row .colling p{
+    color: #8f8f8f;
+    font-size: medium;
+}
+
+.features .container .row .colling .cont{
+    background-color: #F26102;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+.features .container .row .colling span{
+    color: #181818;
+    background-color: #F26102;
+    padding: 20px;
+    padding-top: 35px;
+    border-radius: 50%;
+    font-size: 15px;
+} 
+
+.features .container .row .colling h4{
+    margin-top: 20px;
+} 
+
+/* End The Home */
+/* =====================================================================================================================================  */
+/* Start The Home */
+
+.opinion{
+    margin-top: 50px;
+    background-color: #000000;
+    color: #cccccc;
+    margin-right: 0%;
+    padding: 30px;
+}
+
+.opinion .row div img{
+    width: 100%;
+}
+
+.opinion .row div h3 .change{
+    color: #F26102;
+}
+
+.opinion .row div .con p{
+    width: 70%;
+}
+
+.opinion .row div .con{
+    padding-top: 40px;
+    padding-left: 30px;
+}
+
+.opinion .row .col-lg-8{
+    width: 100%;
+}
+.Certified .flaticon-034-stationary-bike{
+    color: #181818;
+    background-color: #F26102;
+    padding: 13px;
+    padding-top: 30px;
+    border-radius: 50%;
+    width: 20px !important;
+    margin-left: 25%;
+    margin-bottom: 50px;
+}
+
+.Certified h3{
+    margin-top: 30px;
+
+}
+
+
+.Award span{
+    color: #181818;
+    background-color: #F26102;
+    padding: 13px;
+    padding-top: 30px;
+    border-radius: 50%;
+    width: 15px !important;
+    height: 15px !important;
+
+    margin-left: 25%;
+    margin-bottom: 50px;
+}
+
+.Award h3{
+    margin-top: 30px;
+
+}
+
+
+
+
+
+/* End The Exercises */
+
+/* ================================================================================================= */
+
+/* start The Exercises */
+.exercises{
+    margin-top: 40px;
+}
+.exercises .container .header h5{
+    color: #F26102;
+}
+.exercises .container .header h2{
+    color: #e0e0e0;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+.exercises .container .row{
+
+    margin-bottom: 30px;
+}
+.exercises .container .row .cool .col2 img{
+
+    height: 200px;
+}
+.exercises .container .row .cool .card{
+    height: 450px;
+    background-image: url('../images/Exrecises/background.jpg');
+    background-size: cover;
+}
+
+.exercises .container .row .cool .col2 .card-body .card-title{
+
+    color : white ;
+}
+.exercises .container .row .cool .col2 .card-body .card-text{
+
+    color : rgb(150, 150, 150) ;
+} 
+.exercises .container .row .cool .col2 .card-body a{
+
+    background-color: #F26102;
+    color: rgb(41, 41, 41);
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+} 
+.exercises .container .row .cool .col2 .card-body a:hover{
+
+    background-color: #c75102;
+    color: #242424;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+} 
+
+.exercises .container .row .cool .col2 .card-body .card-text{
+    height: 100px;
+}
+
+
+/* End The Exercises */
+
+/* ================================================================================================= */
+
+/* Start The Featured Work  */
+
+.featured_work{
+    padding-top: 50px;
+}
+
+.images{
+    padding-top: 20px;
+}
+
+.featured_work .container h2{
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+}
+
+.featured_work .container p{
+    font-weight: 400;
+    color: #8f8f8f;
+    line-height: 35px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.featured_work .container .list-unstyled li.active{
+    color: rgb(233, 233, 233) !important;
+    background-color: rgb(238 31 31) !important; 
+    border: 2px solid rgb(238 31 31);
+    padding: 10px !important;
+}
+
+.featured_work .container .list-unstyled li{
+    padding: 10px;
+    border: 2px solid #095f83;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+} 
+
+.featured_work .container .list-unstyled li:hover{
+    background-color: rgb(238 31 31) !important; 
+    border: 2px solid rgb(238 31 31);
+    color: rgb(233, 233, 233);
+    font-size: 20px;
+    transition: 0.3s;
+    transform: scale(1.03);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4%;
+} 
+
+ .featured_work .images .row{
+     margin-left: 0%;
+     margin-right: 0%;
+ }
+
+.featured_work .row .col-lg-3 img{
+    border: none !important;
+    height: 450px;
+    width: 100% !important;
+}
+
+.featured_work .row .col-lg-3{
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+.featured_work .row .col-lg-6{
+    width: 100%;
+    padding: 0%;
+    height: 450px;
+    margin: 0%;
+}
+
+.featured_work .row .col-lg-6 img{
+    border: none !important;
+    height: 450px;
+    width: 100% !important;
+}
+
+
+/* End The Featured Work  */
+
+
+
+
+
+/* ================================================================================================= */
+
+/* start The Exercises */
+  
+.trainers{
+    margin-top: 40px;
+}
+
+.trainers .container{
+    padding-top: 30px;
+}
+
+.trainers .container .upper-content h3{
+    color: #F26102;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.trainers .container .upper-content h2{
+    color: #d8d8d8;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.trainers .container .owl-carousel .item .card{
+    border: none;
+    width: 100%;
+}
+
+.trainers .container .owl-carousel .item .card img{
+    height: 300px;
+    border: none;
+}
+
+
+.trainers .container .owl-carousel .item .card .card-body{
+    background-color:#000000 ;
+    
+
+}
+
+.trainers .container .owl-carousel .item .card .card-body .card-title {
+    color: #F26102;
+    font-weight: 700;
+    
+
+}
+
+.trainers .container .owl-carousel .item .card .card-body .card-text{
+    color: #c7c7c7;
+    font-weight: 800;
+    size: 32px;
+    
+
+}
+
+
+
+/* End The Exercises */
+
+/* ====================================================================================== */
+
+/* Start The Openions */
+
+
+.testimonials{
+    height: 400px;
+    /* background-color: black; */
+}
+
+.testimonials .row .col-4 .left-content{
+    height: 400px;
+    background-image: url(../images/Examples/row2_2.jpg);
+
+}
+
+
+
+
+/* End The Openions */
+
+/* ****************************************************************************************************************************************************************  */
+/* Start The Testimonials */
+.testimonials{
+
+    background-image: url(../images/glasses.jpg);
+    background-position: center;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    min-height: 300px;
+
+}
+.testimonials .overlay{
+    padding-top: 50px !important;
+
+}
+
+.testimonials .overlay{
+    background-color: rgba(36, 36, 36 , 0.7);
+    min-height: 400px;
+
+}
+.testimonials .overlay .container .header-testimonial h2{
+    color:#c75102;
+}
+
+.testimonials .overlay .carousel-item{
+    min-height: 300px;
+    margin-top: 30px;
+
+}
+
+.testimonials .overlay .carousel-item img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+.testimonials .overlay .carousel-item .carousel-caption {
+    margin-bottom: 7%;
+    margin-top: 30px;
+}
+
+.testimonials .overlay .carousel-item .carousel-caption p{
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin: -5px;
+
+}
+
+
+.testimonials .overlay .container #testimonials div h5{
+    color: #ee6306;
+}
+
+.testimonials .overlay .container #testimonials div p{
+    color: #cfcfcf;
+}
+
+
+
+/* End The Testimonials */
+
+/* ****************************************************************************************************************************************************************  */
+
+/* Start The Contacts */
+
+
+.contacts{
+    margin: 20px;
+    padding: 20px;
+    padding-top: 50px;
+
+}
+
+.contacts .container .row div{
+    font-size: 18px ;
+}
+.contacts .container .row p{
+    color: #d1d1d1;
+}
+.contacts .container .row div i{
+    font-size: 20px ;
+    margin: 5px;
+    background-color: #c75102;
+    color: #000000;
+    padding : 10px; 
+    border-radius: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/* End The Contacts */
+
+/* ****************************************************************************************************************************************************************  */
+
+/* Start The Testimonials */
+
+
+
+.footer
+{
+     background-color: #232429 ;
+     width: 100%;
+     padding: 30px;
+}
+/* start left side */
+.left-side
+{
+     padding: 30px;
+     /* margin-left: 30px; */
+}
+
+.left-side h2 
+{
+    color: #fff;
+    font-weight: 820;
+    /* font-size: px; */
+    line-height: 16px; 
+    margin-bottom: 40px;
+}
+.for-h4
+{
+    color: #a4acba;
+    padding-bottom: 15px;
+    font-size: 20px;
+}
+
+.for-h4 i
+{
+    color: #a15345;
+    padding-right: 10px;
+}
+
+.icons 
+{
+    margin-top: 25px;
+}
+ 
+.icons i 
+{
+    padding: 15px;
+    background-color: #fb5b1c;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* end left side */
+
+
+/*start middle side */
+.middle-side
+{
+     padding: 30px;
+     
+}
+
+.middle-side h2 
+{
+    color: #fff;
+     font-weight: 820;
+    /* font-size: px; */
+    line-height: 16px; 
+    margin-bottom: 40px;
+}
+
+ 
+.links-elements i 
+{
+    color: #8f4a4c;
+    
+}
+
+.links-elements a 
+{
+    text-decoration: none;
+    color: #a4acba;
+}
+.links-elements
+{
+padding-bottom: 12px; 
+}
+
+#row 
+{
+ margin: 0;
+  
+}
+
+.footer #row div h2{
+    color: #c75102 !important;
+    line-height: 30px;
+}
+
+
+.page{
+    background-image: url('../images/Background/Screenshot\ 2023-02-28\ 151421.jpg');
+    min-height:800px;
+    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    background-size: cover;
+    width: 100%;
+    color: white;
+}
+
+ .page .contain{
+    background-color: #000000 !important;
+    min-height:1000px;
+    opacity: 90%;
+    padding-top: 50px;
+
+ }
+
+ .page .contain .container .row{
+    margin-bottom: 40px;
+
+ }
+ .page .contain .container .row div .row div p{
+    color: #c9c9c9;
+
+ }
+ .page .contain .container .row div .row div a{
+    color:#f36f18;
+
+ }
+
+ @media (min-width:1200px){
+    .img{
+        height: 250px;
+        width: 250px;
+     }
+
+   
+ }
+
+
+ @media (min-width:1000px) and  (max-width:1200px){
+
+    .img{
+        height: 200px;
+        width: 200px;
+     }
+     
+
+}
+
+@media (min-width:800px) and  (max-width:1000px){
+
+    .img{
+        height: 200px;
+        width: 150px;
+     }
+
+     .container {
+        max-width: 869px;
+    }
+    .page .contain .container .row div .row div h4{
+        font-size: 20px;
+     
+      }
+    .page .contain .container .row div .row div p{
+       font-size: 15px;
+    
+     }
+     .page .contain .container .row{
+        margin-bottom: 20px;
+    
+     }
+
+}
+
+
+@media (min-width:600px) and  (max-width:800px){
+
+    .img{
+        height: 195px;
+        width: 170px;
+     }
+
+    .container {
+        max-width: 600px !important;
+    }
+
+    .page .contain .container .row div .row div h4{
+        font-size: 15px;
+     
+      }
+    /* .page .contain .container .row div .row div p{
+       font-size: 15px;
+    
+     }
+     .page .contain .container .row{
+        margin-bottom: 20px;
+    
+     } */ 
+
+}
+
+@media (min-width:770px) and  (max-width:805px){
+
+    .container {
+        max-width: 869px !important;
+    }
+
+
+
+}
+
+
+@media (min-width:400px) and  (max-width:600px){
+
+    .img{
+        height: 175px;
+        width: 170px;
+     }
+
+     /* .container {
+        max-width: 869px;
+    }
+    .page .contain .container .row div .row div h4{
+        font-size: 20px;
+     
+      }
+    .page .contain .container .row div .row div p{
+       font-size: 15px;
+    
+     }
+     .page .contain .container .row{
+        margin-bottom: 20px;
+    
+     } */
+
+}
+
+.exercise{
+  padding: 50px;
+}
+
+.img-exercise img{
+  height: 400px;
+  width: 450px;
+}
+
+.text-exercise h2{
+   color: #c75102;
+   font-weight: 600;
+}
+
+.text-exercise p{
+    color: #e4e3e2;
+    font-weight: 400;
+ }
+
+
+ .exercise .container {
+    max-width: 600px;
+}
+
+
+
+
+
