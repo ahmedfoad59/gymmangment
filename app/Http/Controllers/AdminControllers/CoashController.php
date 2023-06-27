@@ -3,6 +3,7 @@ namespace App\Http\Controllers\AdminControllers;
 use App\Http\Controllers\Controller;
 use App\Models\Coash;
 use App\Models\User;
+use App\Models\Ratecoash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -43,7 +44,7 @@ class CoashController extends Controller
             ]);
             // return  $user->id;
 
-            Coash::create([
+           $coash= Coash::create([
                 'name' => $request->name,
                 'email' => $request->email,
                 'phone_number' => $request->phone_number,
@@ -55,6 +56,15 @@ class CoashController extends Controller
                 'user_id'    =>$user->id,
 
             ]);
+            $rate=Ratecoash::create([
+                'training'    =>0,
+                'feeding'    =>0,
+                // 'user_id'     => $user->id,
+                'Coash_id'    =>$coash->id,
+                'Regularity'  =>0,
+                'Response'    =>0,
+                'Total'      =>0,
+                ]);
 
             // User::create([
             //     'name' => $request->name,

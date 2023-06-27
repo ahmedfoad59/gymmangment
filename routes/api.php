@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'App\Http\Controllers\ApiControllers'] , function(){
     
     Route::get('allusers' , 'GustController@users');
+    Route::get('allcoaches' , 'GustController@coaches');
     // Route::get('allcountry' , 'GustController@allcountry');
     // Route::post('addcountry' , 'GustController@addcountry');
     Route::post('customcoach' , 'GustController@customcoach');
@@ -27,7 +28,9 @@ Route::group(['namespace' => 'App\Http\Controllers\ApiControllers'] , function()
     Route::post('auth/register' , 'AuthController@register');
 
     Route::get('auth/user/{id}' , 'AuthController@getUserData');
+    Route::post('updateprofil' , 'GustController@updateprofil');
     Route::post('updaterate' , 'GustController@updaterate');
+    Route::post('updateratecoach' , 'GustController@updateratecoach');
 
 
 
