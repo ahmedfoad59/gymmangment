@@ -21,14 +21,15 @@ Route::group(['namespace' => 'App\Http\Controllers\ApiControllers'] , function()
     Route::get('allcoaches' , 'GustController@coaches');
     // Route::get('allcountry' , 'GustController@allcountry');
     // Route::post('addcountry' , 'GustController@addcountry');
-    Route::post('customcoach' , 'GustController@customcoach');
+    Route::get('customcoach/{id}' , 'GustController@customcoach');
 
     Route::post('auth/login' , 'AuthController@login');
 
     Route::post('auth/register' , 'AuthController@register');
-
+    
     Route::get('auth/user/{id}' , 'AuthController@getUserData');
     Route::post('updateprofil' , 'GustController@updateprofil');
+    Route::post('updateprofilcoash' , 'GustController@updateprofilcoash');
     Route::post('updaterate' , 'GustController@updaterate');
     Route::post('updateratecoach' , 'GustController@updateratecoach');
 

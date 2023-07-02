@@ -6,11 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-
+use App\Models\Rate;
 class UserController extends Controller
 {
     public function index(){
-        $users = User::paginate(20);
+        $users = User::where('type','client')->paginate(20);
         return view('dashboard.users.users')->with([
             'users' => $users ,
         ]);
@@ -23,9 +23,9 @@ class UserController extends Controller
 
     
     public function store(Request $request){
-
+ 
         try {
-            User::create([
+            $user=User::create([
                 'name' => $request->name,
                 'email' => $request->email,
                 'phone_number' => $request->phone_number,
@@ -41,7 +41,15 @@ class UserController extends Controller
                 'coash_name' => $request->coash_name,
                 'api_token' => bin2hex(openssl_random_pseudo_bytes(60)),
             ]);
-
+            $rate=Rate::create([
+                'training'    =>0,
+                'feeding'    =>0,
+                'user_id'     => $user->id,
+                // 'Coash_id'    =>$request->Coash_id,
+                'Regularity'  =>0,
+                'Response'    =>0,
+                'Total'      =>0,
+                ]);
             return redirect()->route('admin.users-list');
 
         }catch (\Exception $exception){

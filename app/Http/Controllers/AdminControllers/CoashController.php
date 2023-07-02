@@ -36,13 +36,13 @@ class CoashController extends Controller
                 // 'fat_percentage' => $request->fat,
                 // 'height' => $request->height,
                 // 'weight' => $request->weight,
-                // 'account_status' => 'Pending',
+                // 'account_status' => 'Pending', 
                 // 'gender' => $request->gender,
                 // 'membership' => $request->membership,
                 // 'coash_name' => $request->coash_name,
                 'api_token' => bin2hex(openssl_random_pseudo_bytes(60)),
             ]);
-            // return  $user->id;
+            return  $user->id;
 
            $coash= Coash::create([
                 'name' => $request->name,
@@ -53,17 +53,17 @@ class CoashController extends Controller
                 'salary' => $request->salary,
                 'joined_at' => $request->joined_at,
                 'api_token' => bin2hex(openssl_random_pseudo_bytes(60)),
-                'user_id'    =>$user->id,
+                // 'user_id'    =>$user->id,
 
             ]);
             $rate=Ratecoash::create([
-                'training'    =>0,
-                'feeding'    =>0,
+                // 'training'    =>0,
+                // 'feeding'    =>0,
                 // 'user_id'     => $user->id,
                 'Coash_id'    =>$coash->id,
-                'Regularity'  =>0,
-                'Response'    =>0,
-                'Total'      =>0,
+                // 'Regularity'  =>0,
+                // 'Response'    =>0,
+                'stars'      =>1,
                 ]);
 
             // User::create([

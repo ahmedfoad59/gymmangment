@@ -50,7 +50,7 @@ class GustController extends Controller
     }
     public function users()
     {
-        $users=User::get();
+        $users=User::where('type','client')->get();
         return response()->json([
             'status'=>true,
             'users'=>UserResource::collection($users)->response()->getData(true)
@@ -64,23 +64,30 @@ class GustController extends Controller
             'Coashs'=>CoashResource::collection($Coash)->response()->getData(true)
         ]); 
     }
-    public function customcoach(Request $request)
+    public function customcoach($id)
     {
-        $validator = Validator::make($request->all(), [
-            'id'   =>'required|exists:coaches,id',
-        ]);
-        if($validator->fails())
-        {
+        // $validator = Validator::make($request->all(), [
+        //     'id'   =>'required|exists:coaches,id',
+        // ]);
+        // if($validator->fails())
+        // {
+        //     return response()->json([
+        //         'status'=>false,
+        //         'message'=>$validator->errors(),
+        //     ],400);
+        // }
+        $coach=Coash::find($id);
+        if ($coach) {
             return response()->json([
-                'status'=>false,
-                'message'=>$validator->errors(),
-            ],400);
+                'status'=>true,
+                'coach'=>new CoashResource($coach)
+            ]); 
         }
-        $coach=Coash::find($request->id);
         return response()->json([
-            'status'=>true,
-            'coach'=>new CoashResource($coach),
-        ]); 
+            'status'=>false,
+            'message'=>'coach not found',
+        ]);
+        
     }
 
    
@@ -133,11 +140,11 @@ class GustController extends Controller
             // 'id'=>'required|exists:rates,id',
             'Coash_id'   =>'required|exists:coaches,id',
             'user_id'   =>'required|exists:users,id',
-            'training'=> ['required',Rule::in(1,2,3,4,5,6,7,8,9,10)],
-            'feeding'=> ['required',Rule::in(1,2,3,4,5,6,7,8,9,10)],
-            'Regularity'=> ['required',Rule::in(1,2,3,4,5,6,7,8,9,10)],
-            'Response'=> ['required',Rule::in(1,2,3,4,5,6,7,8,9,10)],
-            'Total'=> ['required',Rule::in(1,2,3,4,5,6,7,8,9,10)],
+            // 'training'=> ['required',Rule::in(1,2,3,4,5,6,7,8,9,10)],
+            // 'feeding'=> ['required',Rule::in(1,2,3,4,5,6,7,8,9,10)],
+            // 'Regularity'=> ['required',Rule::in(1,2,3,4,5,6,7,8,9,10)],
+            // 'Response'=> ['required',Rule::in(1,2,3,4,5,6,7,8,9,10)],
+            'stars'=> ['required',Rule::in(1,2,3,4,5,6,7,8,9,10)],
         ]);
         if($validator->fails())
         {
@@ -147,16 +154,22 @@ class GustController extends Controller
             ],400);
         }
         $rate=Ratecoash::where('Coash_id',$request->Coash_id)->first();
-
         $rate->update([
-        'training'    =>$request->training,
-        'feeding'    =>$request->feeding,
-        'user_id'     =>$request->user_id,
-        'Coash_id'    =>$request->Coash_id,
-        'Regularity'  =>$request->Regularity,
-        'Response'    =>$request->Response,
-        'Total'      =>$request->Total ,
+            'user_id'     =>$request->user_id,
+            'Coash_id'    =>$request->Coash_id,
+            'stars'      =>$request->stars ,
+
         ]);
+       
+        // $rate->update([
+        // 'training'    =>$request->training,
+        // 'feeding'    =>$request->feeding,
+        // 'user_id'     =>$request->user_id,
+        // 'Coash_id'    =>$request->Coash_id,
+        // 'Regularity'  =>$request->Regularity,
+        // 'Response'    =>$request->Response,
+        // 'Total'      =>$request->Total ,
+        // ]);
         if ($rate) {
             return response()->json([
                 'status'=>true,
@@ -175,7 +188,7 @@ class GustController extends Controller
             // 'id'=>'required|exists:rates,id',
             'user_id'   =>'required|exists:users,id',
             'name'     => ['required', 'string', 'max:255'],
-            'email'     => ['required' , 'string', 'email', 'max:255', 'unique:users'],
+            'email'     => ['nullable' , 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
             'phone_number' => ['required', 'string'],
             'image_url' => ['required', 'string'],
@@ -197,7 +210,9 @@ class GustController extends Controller
         }
            $user=User::find($request->user_id);
             $user -> name = $request->input('name');
-            $user -> email = $request->input('email');
+            if (!empty($request->input('email'))) {
+                $user -> email = $request->input('email');
+            }
             $user -> password  = Hash::make($request->input('password'));
             $user -> phone_number = $request->input('phone_number');
             $user -> image_url = $request->input('image_url');
@@ -218,7 +233,46 @@ class GustController extends Controller
                 'data' => $user
             ]);
     }
-
+    public function updateprofilcoash(Request $request) 
+    { 
+       
+        $validator = Validator::make($request->all(), [
+            // 'id'=>'required|exists:rates,id',
+            'coach_id'   =>'required|exists:coaches,id',
+            'name'     => ['required', 'string', 'max:255'],
+            'email'     => ['nullable' , 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8'],
+            'phone_number' => ['required', 'string'],
+            'image' => ['required', 'string'],
+            'salary' => ['required' , 'integer'],
+            'joined_at' => ['required' ,'date'],
+           
+        ]);
+        if($validator->fails())
+        {
+            return response()->json([
+                'status'=>false,
+                'message'=>$validator->errors(),
+            ],400);
+        }
+           $Coash=Coash::find($request->coach_id);
+            $Coash -> name = $request->input('name');
+            if (!empty($request->input('email'))) {
+                $Coash -> email = $request->input('email');
+            }
+            $Coash -> password  = Hash::make($request->input('password'));
+            $Coash -> phone_number = $request->input('phone_number');
+            $Coash -> image = $request->input('image');
+            $Coash -> salary = $request->input('salary');
+            $Coash -> joined_at = $request->input('joined_at');
+           
+            $Coash -> save();
+            return Response()->json([
+                'success' => true,
+                'message' => 'Coash updated successfully',
+                'data' => $Coash
+            ]);
+    }
 }
 
 

@@ -20,13 +20,13 @@ class Ratecoash extends Authenticatable
     protected  $table = 'ratesofcoash' ;
     protected $fillable = [
 
-        'training',
-        'feeding',
+        // 'training',
+        // 'feeding',
         'user_id',
         'Coash_id',
-        'Regularity',
-        'Response',
-        'Total',
+        // 'Regularity',
+        // 'Response',
+        'stars',
         // 'created_at',
         // 'updated_at',
 
